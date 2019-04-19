@@ -1,0 +1,51 @@
+.wrapper {
+	width: 100%;
+	height: 100%;
+	font-size: 34rpx;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.wrapper .content {
+	width: 95%;
+	height: 400rpx;
+	background-color: #fff;
+	border-radius: 8rpx;
+	padding: 50rpx;
+	box-sizing: border-box;
+}
+
+.top text {
+	font-size: 28rpx;
+	color: #bbb;
+}
+
+.choice-person {
+	width: 100%;
+	margin: 50rpx 0;
+	box-sizing: border-box;
+}
+
+.choice-person text {
+	color: #000;
+	padding: 0 15rpx;
+	line-height: 50rpx;
+	font-size: 28rpx;
+	margin-right: 10rpx;
+	box-sizing: border-box;
+	border: 1rpx solid transparent;
+}
+
+.choice-person .active {
+	color: #169bd5;
+	border: 1rpx solid #169bd5;
+	border-radius: 20rpx;
+}
+
+.add {
+	color: #169bd5;
+}

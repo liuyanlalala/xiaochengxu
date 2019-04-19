@@ -1,0 +1,27 @@
+/**app.wxss**/
+page{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+	background-color: #f0f0f0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family:'微软雅黑';
+} 
+/* 滚动条 */
+.page-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+/*没有数据显示的内容*/
+.no-data {
+	width: 100%;
+	text-align: center;
+}

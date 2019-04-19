@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+		"pages/person/person",
+		"pages/template/personOperate",
+		"pages/addCompany/addCompany"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+	"tabBar": {
+		"color": "#aaa",
+		"selectedColor": "#169bd5",
+		"borderStyle": "white",
+		"backgroundColor": "#f8f8f8",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "",
+				"iconPath": "image/shouye1.png",
+				"selectedIconPath": "image/shouye2.png"
+			},
+			{
+				"pagePath": "pages/logs/logs",
+				"text": "",
+				"iconPath": "image/rizhi1.png",
+				"selectedIconPath": "image/rizhi2.png"
+			},
+			{
+				"pagePath": "pages/person/person",
+				"text": "",
+				"iconPath": "image/geren1.png",
+				"selectedIconPath": "image/geren2.png"
+			}
+		]
+	},
+	"networkTimeout": {
+		"request": 20000,
+		"connectSocket": 20000,
+		"uploadFile": 20000,
+		"downloadFile": 20000
+	},
+	"debug":true
+}

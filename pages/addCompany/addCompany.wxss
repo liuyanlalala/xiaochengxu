@@ -1,0 +1,113 @@
+@import "../template/personOperate.wxss";
+.container {
+	width: 100%;
+	font-size: 32rpx;
+	background-color: #f0f0f0;
+	box-sizing: border-box;
+	height: 100%;
+	/* position: relative; */
+}
+.search-hea {
+	width: 100%;
+	height: 120rpx;
+	background-color: #f0f0f0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+.search-con {
+	width: 100%;
+	height: 100rpx;
+	padding: 10rpx 20rpx;
+	box-sizing: border-box;
+	background-color: #fff;
+	/* position: relative; */
+	line-height: 100rpx;
+	/* margin-bottom: 20rpx; */
+
+}
+
+.search-con input {
+	width: 100%;
+	height: 100%;
+	border: 1rpx solid #bbb;
+	border-radius: 50rpx;
+	padding: 10rpx 120rpx 10rpx 30rpx;
+	box-sizing: border-box;
+}
+
+.search-con text {
+	/* width: 15%; */
+	width: 100rpx;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 40rpx;
+	text-align: center;
+}
+
+.content {
+	width: 100%;
+	margin-top: 120rpx;
+	/* position: absolute;
+	top: 120rpx; */
+}
+
+.content-scroll {
+	width: 100%;
+}
+
+.company-list {
+	width: 100%;
+	height: 200rpx;
+	padding: 20rpx;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;	
+	background-color: #fff;
+	margin-bottom: 20rpx;
+}
+
+.company-top {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.company-top .company-name {
+	font-size: 36rpx;
+}
+.company-top .choice {
+	font-size: 30rpx;
+	color: #169bd5;
+	border: 1rpx solid #169bd5;
+	border-radius: 8rpx;
+	width: 100rpx;
+	text-align: center;
+	line-height: 60rpx;
+	box-sizing: border-box;
+}
+
+.company-bottom {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 28rpx;
+	height: 40%;
+}
+
+.company-bottom .common {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.color-gra {
+	color: #b0b0b0;
+}

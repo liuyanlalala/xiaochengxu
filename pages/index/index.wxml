@@ -1,0 +1,51 @@
+<import src="../template/personOperate.wxml" />
+<view class="container">
+  <view class="com-fix">
+    <view class="back-btn">
+      <button class="btn">返回</button>
+    </view>
+    <view class="nav-hea">
+      <text name="totalCount">共计：{{total}}条</text>
+      <view class="nav-right">
+        <view class="search-wrapper">
+          <input placeholder='输入企业名称' placeholder-class='place-style' wx:if="{{isShowSearch}}" type="text" bindconfirm='handleKeyBoardComplete' />
+          <text class="search" bindtap="handleSearchBtn">搜索</text>
+        </view>
+        <text bindtap='handleConditionsBtn'>筛选</text>
+        <text bindtap='handleClickAdd'>添加</text>
+      </view>
+      <view wx:if="{{isShowConditions}}" class="conditions-screen">
+        <text wx:for="{{conditions}}" wx:key="index" bindtap="handleConditionsScreen" data-duty="{{item.content}}">{{item.content}}</text>
+      </view>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" class="page-body" style="height: {{height}}px" bindscrolltolower="loadMore">
+    <block wx:if="{{companyList.length > 0}}">
+      <view class="company-list" wx:for="{{companyList}}" wx:key="index">
+        <view class="list-top">
+          <view name="companyName" class="company-name">{{item.qymc}}</view>
+          <view class="operate">
+            <text data-gsid="{{item.gs_id}}" data-qymc="{{item.qymc}}" data-repid="{{item.id}}" data-dutyarr="{{item.duty_arr.length > 0 ? item.duty_arr : []}}" class="edit" bindtap="handleClickEdit">编辑</text>
+            <text data-repid="{{item.id}}" bindtap='handleDeleteCompany'>删除</text>
+          </view>
+        </view>
+        <view class="list-bottom">
+          <block wx:if="{{item.duty_arr.length > 0}}">
+            <text class="{{one.value ? 'active' : ''}}" wx:for="{{item.duty_arr}}" wx:for-item="one" wx:key="index">{{one.name}}</text>
+          </block>
+          <block wx:else>
+            <text wx:for="{{conditions}}" wx:for-item="one" wx:key="index">{{one.content}}</text>
+          </block>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="no-data">
+        <text>暂无相关数据</text>
+      </view>
+    </block>
+  </scroll-view>
+  <block wx:if="{{isClickAdd}}">
+    <template is="personOperate" data="{{condition: conditions, operate: '编辑'}}"></template>
+  </block>
+</view>

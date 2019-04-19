@@ -1,0 +1,33 @@
+<!-- 暂时没有使用 -->
+<template name="type">
+  <text data-id="{{id}}" bindtap="handleChoicePeople" class="{{id === choice ? 'active' : ''}}">{{content}}</text>
+</template>
+
+<!-- 添加、编辑弹窗模板 -->
+<template name="personOperate">
+  <view class="wrapper">
+    <view class="content">
+      <view class="top">
+        <label>认识的人</label>
+        <text>(点击选择你认识该公司的人)</text>
+      </view>
+      <view class="choice-person">
+        <!-- <block wx:for="{{condition}}" wx:key="index">
+<template is="type" data="{{...item, choice}}"></template>
+</block> -->
+
+        <text wx:for="{{condition}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}" bindtap="handleChoicePeople" class="{{item.isSelected ? 'active' : ''}}">{{item.content}}</text>
+      </view>
+      <text class="add" bindtap="handleAdd">{{operate}}</text>
+    </view>
+  </view>
+</template>
+
+<!-- tabbar模板 -->
+<template name="tabBar">
+	<view class="tabBar">
+	<block>
+	vi
+	</block>
+	</view>
+</template>

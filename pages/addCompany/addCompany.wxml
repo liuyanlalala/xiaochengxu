@@ -1,0 +1,43 @@
+<import src="../template/personOperate.wxml" />
+<view class="container">
+  <view class="search-hea">
+    <view class="search-con">
+      <input type="text" bindinput='inputSearchValue' />
+      <text bindtap='handleClickSearch'>搜索</text>
+    </view>
+  </view>
+  <view class="content">
+    <scroll-view class="content-scroll" scroll-y style="height: {{height}}px" bindscrolltolower="loadMore">
+      <block wx:if="{{companyList.length > 0}}">
+        <view class="company-list" wx:for="{{companyList}}" wx:key="index">
+          <view class="company-top">
+            <text class="company-name">{{item.gsmc}}</text>
+            <text class="choice" bindtap='handleClickChoice' data-gsid="{{item.gs_id}}" data-gsmc="{{item.gsmc}}">选择</text>
+          </view>
+          <view class="company-bottom">
+            <view class="common left">
+              <text class="color-gra">统一社会信用代码</text>
+              <text>91510000662787084D</text>
+            </view>
+            <view class="common center">
+              <text class="color-gra">法定代表人</text>
+              <text>{{item.legal_person}}</text>
+            </view>
+            <view class="common right">
+              <text class="color-gra">注册属地</text>
+              <text>{{item.area}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="no-data">
+          <text>暂无相关数据</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <block wx:if="{{isClickAdd}}">
+    <template is="personOperate" data="{{condition: conditions, operate: '添加'}}"></template>
+  </block>
+</view>
